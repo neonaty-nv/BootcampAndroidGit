@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contacto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/cToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Sprint - About Me"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="-1dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:srcCompat="@drawable/background_blur" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="30dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="30dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="35dp"
+                android:elevation="1dp"
+                app:srcCompat="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/imagShapeLogo"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/back_logo" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="700dp"
+            android:layout_height="0dp"
+            android:background="@drawable/round_layout"
+            app:layout_constraintBottom_toBottomOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline1">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/layoutButtons"
+                android:layout_marginStart="140dp"
+                android:layout_marginEnd="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:layout_toStartOf="@+id/layoutButtons"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:drawableStart="@drawable/email"
+                    android:drawablePadding="6dp"
+                    android:textSize="20sp"
+                    android:hint="@string/hCorreo"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorHint" />
+
+                <Button
+                    android:id="@+id/btnEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_gradient_dark"
+                    android:text="@string/btnCorreo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="40dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnBehance"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/buttonfloat_gradient"
+                    android:contentDescription="Behance"
+                    app:srcCompat="@drawable/ic_behance" />
+
+                <ImageButton
+                    android:id="@+id/btnWsp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/buttonfloat_gradient"
+                    android:contentDescription="Whatsapp"
+                    app:srcCompat="@drawable/ic_whatsapp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

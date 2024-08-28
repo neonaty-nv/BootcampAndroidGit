@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sprint_M4</string>
+
+    <string name="contacto">Contactar</string>
+    <string name="tittle">About me</string>
+    <string name="description">Hola! me llamo Nathaly Vargas, soy diseñadora gráfica de profesión,
+        ilustradora, diseñadora UX-UI y actualmente estudio Desarrollo de aplicaciones móviles</string>
+    <string name="btnWsp">Llamar</string>
+    <string name="btnBehance">Portafolio</string>
+    <string name="hCorreo">¡Escríbeme!</string>
+    <string name="btnCorreo">Enviar</string>
+</resources>
