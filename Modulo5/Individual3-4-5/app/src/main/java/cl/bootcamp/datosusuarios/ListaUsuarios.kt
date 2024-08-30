@@ -1,6 +1,6 @@
 package cl.bootcamp.datosusuarios
 
-class List {
+class UserList {
 
     private val usersList = mutableListOf<Users>()
 
@@ -27,10 +27,16 @@ class List {
             }
         }
     }
+
+    //--------------------------INDIVIDUAL 5--------------------------
+    fun filterAge(minAge: Int): List<Users> {
+        return usersList.filter { it.age > minAge }
+    }
 }
 
+
 fun main() {
-    val userListShow = List()
+    val userListShow = UserList()
 
     val user1 = Users("Matias", 30, "Diseñador", null)
     val user2 = Users("Paula", 32, "Prevencionista", user1)
@@ -57,4 +63,14 @@ fun main() {
     println("--------NUEVA LISTA DE USUARIOS--------")
     println("")
     userListShow.mostrarLista()
+
+
+    //--------------------------INDIVIDUAL 5--------------------------
+
+    // Filtrar usuarios mayores de 30 años
+    println("--------USUARIOS MAYORES DE 30 AÑOS--------")
+    val filterUser = userListShow.filterAge(30)
+    filterUser.forEach { user ->
+        println("Nombre: ${user.name}, Edad: ${user.age}")
+    }
 }
