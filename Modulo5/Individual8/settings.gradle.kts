@@ -19,7 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MostrarImagen"
-include(":app")
+rootProject.name = "ColeccionImagenes"
 include(":app")
  
